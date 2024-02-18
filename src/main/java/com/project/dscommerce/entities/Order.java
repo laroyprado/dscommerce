@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @AllArgsConstructor
@@ -30,6 +32,10 @@ public class Order {
 
     @OneToOne(mappedBy = "order",cascade = CascadeType.ALL)
     private Payment payment;
+
+
+    @OneToMany(mappedBy = "id.order")
+    private Set<OrderItem> items = new HashSet<>();
 
 
 
