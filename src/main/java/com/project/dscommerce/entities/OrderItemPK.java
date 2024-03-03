@@ -6,12 +6,14 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 @Embeddable
 public class OrderItemPK {
 
@@ -24,6 +26,7 @@ public class OrderItemPK {
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
+
 
 
 

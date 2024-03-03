@@ -4,6 +4,7 @@ package com.project.dscommerce.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
@@ -12,6 +13,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Data
 @Entity
+@EqualsAndHashCode
 @Table(name = "tb_payment")
 public class Payment {
 
